@@ -6,7 +6,7 @@ app = FastAPI()
 @app.get("/")
 def home():
     email = "etwhalay@gmail.com"
-    current_time = datetime.now().replace(microsecond=0).isoformat()
+    current_time = str(datetime.now().replace(microsecond=0).isoformat())+'Z'
     github_url = "https://github.com/Authvibes/stage-0.git"
     return{
         "email" : email,
